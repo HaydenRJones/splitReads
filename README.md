@@ -24,14 +24,18 @@ At the moment this script is super slow, especially for very large input files.
 ```
 ## Script arguments
 ```
-- file : a sequence file in the .fastq format
+- file : (positional) a sequence file in the .fastq format
 ```
 **It is highly recomended that large sequence files are split into multiple smaller files,
 and then merged after running this script on each of them.**
 
 ## Examples
-exa
-exa
-exa
+The number of regex matches for the 5' barcoding region per read, compared to read length. In highly concatenated datasets longer reads on average have many more matches.
+
+![a boxplot of the number of rx matches for the flanking region compared to the read length](example_images/head_rx_matches.png)
+
+The relative position of regex matches for the 5' barcoding region read, in highly concatenated dataset. Most matches are towards the 5' end of the read, but there are many matches found throughout the length of the read.
+
+![a boxplot of the number of rx matches for the flanking region compared to the read length](example_images/head_rx_position.png)
 
 *\*Hacked Together (but/barely functional) read splitter*
